@@ -7,3 +7,28 @@ $fa-font-path: '../webfonts';
 @import '@fortawesome/fontawesome-free/scss/brands.scss';
 
 @import 'bootstrap/scss/bootstrap';
+
+*{
+    color: black;
+}
+
+img {
+    width: 100%;
+}
+
+.bg-my-dark-grey {
+    background-color: $black;
+}
+
+.bg-my-green {
+    background-color: $green;
+}
+
+.text-my-blue {
+    color: $light-blue;
+}
+
+.green-btn:hover {
+    background-color: $dark-green;
+    transition: all 0.8s;
+}

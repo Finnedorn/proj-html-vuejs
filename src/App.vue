@@ -1,7 +1,5 @@
 <template>
   <HeaderComponent/>
-  <MainComponent/>
-  <FooterComponent/>
 </template>
 
 <script>
@@ -22,10 +20,6 @@
         
       } 
     },
-    methods: {
-    },
-    created() {
-    }
   }
 </script>
 
