@@ -8,5 +8,11 @@ export const store = reactive({
         'COURSES',
         'LOCATIONS',
         'BLOG'
+    ],
+    formPlaceHolderArr: [
+        'Your Name*',
+        'Email',
+        'Telephone',
+        'Location'
     ]
 });

@@ -28,9 +28,7 @@
               <div class="greenbar"></div>
             </li>
           </ul>
-          <button class="p-2 px-4 rounded-5 border-0 bg-my-green green-btn">
-            <a class="nav-link active text-light fw-bold" aria-current="page" href="#">BOOK NOW</a>
-          </button>
+          <BtnGreenComponent :content="'BOOK NOW'"/>
         </div>
       </nav>
     </div>
@@ -46,19 +44,51 @@
       </div>
     </div>
   </div>
+  <!--first section-->
+  <div class="container-fluid">
+    <div class="container">
+      <div class="row py-2">
+        <div class="col-lg-6 col-md-12 text-wrapper">
+          <h2 class="text-my-dark-grey fs-1 pb-4">
+            Get Behind the Wheel
+          </h2>
+          <p class=" fs-4 pb-4 text-my-blue">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit architecto officia, assumenda molestiae recusandae quisquam eveniet sed. Consequuntur.
+          </p>
+          <p class="fs-6 text-my-blue">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus reprehenderit recusandae laborum dolores, dolorem et excepturi maxime asperiores nemo eaque reiciendis, iure accusamus aspernatur architecto placeat ipsam. Quae quisquam labore asperiores repellat, dignissimos officia ipsa cumque quo aut dolorem maiores totam nihil magnam ea excepturi nisi dolore. Ex, omnis
+          </p>
+        </div>
+        <div class="col-lg-6 col-md-12 px-5">
+          <div class="p-5 form-wrapper rounded-3 text-center bg-my-white">
+            <h2 class="pb-3 text-my-green">
+              First Lesson Free!
+            </h2>
+            <p class="fs-5 py-3 text-my-blue">
+              When u make a block booking with us your first lesson is included free.
+            </p>
+            <input v-for="(el, index) in store.formPlaceHolderArr" class="form-control my-4 py-3 bg-my-light-grey" type="text" :placeholder="el" aria-label="default input example" :key="index">
+            <BtnGreenComponent :content="'REQUEST A CALLBACK'"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-  import {store} from '../assets/data/store' 
+  import {store} from '../assets/data/store';
+  import BtnGreenComponent from './subcomponents/BtnGreenComponent.vue';
   export default {
     name: 'HeaderComponent',
+    components: {
+      BtnGreenComponent
+    },
     data() {
       return {
         store
       } 
-    },
-    methods: {
-    },
+    }
   }
 </script>
 
@@ -70,23 +100,12 @@
 }
 
 .hero-wrapper {
-  height: 750px;
   background-image: url(../assets/images/homepage-hero-background.jpg);
   background-size: cover;
 }
 
 .hero-title {
-  padding-top: 250px;
-  animation: move-right 0.5s forwards;
-}
-
-@keyframes move-right {
-  0% {
-    transform: translateX(-3rem);
-  }
-  100% {
-    transform: translateX(0rem);
-  }
+  padding: 20% 0%;
 }
 
 .hero-title-font {
@@ -130,4 +149,19 @@
     width: 60%;
   }
 }
+
+.text-wrapper {
+  padding: 80px 80px 0px 0px;
+}
+
+.form-wrapper {
+  box-shadow:  0.3em 0.3em 1em rgba(58, 58, 58, 0.234);
+  transform: translateY(-3rem);
+}
+
+.form-control {
+  font-size: 0.9rem !important;
+  color: $light-blue !important;
+}
+
 </style>

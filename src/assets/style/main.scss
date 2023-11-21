@@ -8,9 +8,6 @@ $fa-font-path: '../webfonts';
 
 @import 'bootstrap/scss/bootstrap';
 
-*{
-    color: black;
-}
 
 img {
     width: 100%;
@@ -24,8 +21,24 @@ img {
     background-color: $green;
 }
 
+.bg-my-white {
+    background-color: $white;
+}
+
+.bg-my-light-grey {
+    background-color: $light-grey !important;
+}
+
 .text-my-blue {
     color: $light-blue;
+}
+
+.text-my-dark-grey {
+    color: $dark-grey;
+}
+
+.text-my-green {
+    color: $green;
 }
 
 .green-btn:hover {
