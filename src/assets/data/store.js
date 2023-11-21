@@ -14,5 +14,20 @@ export const store = reactive({
         'Email',
         'Telephone',
         'Location'
+    ],
+    coursesArr: [
+        {
+          picture: "/images/courses-passplus.jpg",
+          title: 'Pass Plus'
+        },
+        {
+          picture: "/public/images/course-intensive.jpg",
+          title: 'Intensive Course'
+        },
+        {
+          picture: "/public/images/courses-instructor.jpg",
+          title: 'Instructor'
+        }
     ]
+    
 });

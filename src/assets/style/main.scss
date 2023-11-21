@@ -13,6 +13,10 @@ img {
     width: 100%;
 }
 
+p {
+    line-height: 2.3rem;
+}
+
 .bg-my-dark-grey {
     background-color: $black;
 }
@@ -37,11 +41,10 @@ img {
     color: $dark-grey;
 }
 
-.text-my-green {
-    color: $green;
+.text-my-grey {
+    color: $grey;
 }
 
-.green-btn:hover {
-    background-color: $dark-green;
-    transition: all 0.8s;
+.text-my-green {
+    color: $green;
 }
