@@ -34,23 +34,52 @@
           </p>
           <BtnGreenComponent :content="'COURSE INFORMATION'" class="mb-3"/>
         </div>
-        <div class="col-lg-8 d-flex">
+        <div class="col-lg-8 px-5 d-flex flex-wrap justify-content-center ">
           <MicroCardComponent v-for="(el,index) in store.coursesArr" :key="index" :image="el.picture" :title="el.title" />
         </div>
       </div>
     </div>
   </div>
+  <!--section rate-->
+  <div class="container-fluid rate-wrapper">
+    <div class="container">
+      <div class="row justify-content-center">
+        <CardRateComponent v-for="(el,idex) in store.rateArr" :key="index" :title="el" class="col-3"/>
+      </div>
+    </div>
+  </div>
+  <!--section instructor-->
+  <div class="container-fluid">
+    <div class="container pt-5">
+      <div class="row align-items-center py-5">
+        <div class="col-lg-7">
+          <h2 class="fs-1 pb-4 text-my-dark-grey">
+            Your Instructors
+          </h2>
+          <p class="fs-4 text-my-blue">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae non corporis corrupti deserunt, cum eum ipsam ex, soluta eos iste fuga dolores.
+          </p>
+        </div>
+        <div class="col-lg-5 pt-5 text-center">
+          <BtnGreenComponent :content="'MORE ABOUT US'" class="more" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--instructor cards-->
 </template>
 
 <script>
   import {store} from '../assets/data/store';
   import BtnGreenComponent from './subcomponents/BtnGreenComponent.vue';
   import MicroCardComponent from './subcomponents/MicroCardComponent.vue';
+  import CardRateComponent from './subcomponents/CardRateComponent.vue';
   export default {
     name: 'MainComponent',
     components: {
       BtnGreenComponent,
-      MicroCardComponent
+      MicroCardComponent,
+      CardRateComponent
     },
     data() {
       return {
@@ -61,6 +90,7 @@
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/style/partials/variables' as *;
 .cta-wrapper {
   padding: 80px 0px;
   background-image: url(../assets/images/horizontal-cta-background.jpg);
@@ -84,4 +114,25 @@
   transform: translateY(-3.5rem);
 }
 
+.rate-wrapper {
+  position: relative;
+  height: 400px;
+}
+
+.rate-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+  background-image: url(../assets/images/latestnews-bottom.png);
+  filter: invert(1%) sepia(10%) saturate(76%) hue-rotate(175deg) brightness(98%) contrast(92%);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.more {
+  padding: 8px 100px !important;
+}
 </style>

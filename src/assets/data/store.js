@@ -28,6 +28,10 @@ export const store = reactive({
           picture: "/public/images/courses-instructor.jpg",
           title: 'Instructor'
         }
+    ],
+    rateArr: [
+        'PASS RATE',
+        'REFERRAL RATE',
+        'ACCIDENT RATE'
     ]
-    
 });
