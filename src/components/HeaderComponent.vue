@@ -1,7 +1,7 @@
 <template>
   <!--pre-header-->
   <div class="container-fluid bg-my-dark-grey">
-    <div class="container py-2 d-flex  justify-content-between">
+    <div class="container py-3 d-flex  justify-content-between">
       <div class="pre-header text-my-blue">
         We have a 95% Succesfull Pass Rate!
       </div>

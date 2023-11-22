@@ -1,6 +1,7 @@
 <template>
   <HeaderComponent/>
   <MainComponent/>
+  <FooterComponent/>
 </template>
 
 <script>
@@ -24,5 +25,4 @@
 </script>
 
 <style lang="scss" scoped>
-
 </style>

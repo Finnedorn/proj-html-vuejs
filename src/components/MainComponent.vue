@@ -18,7 +18,7 @@
       </div>
     </div>
   </div>
-  <!--section-courses-->
+  <!--courses-->
   <div class="container-fluid courses-wrapper">
     <div class="container">
       <div class="row">

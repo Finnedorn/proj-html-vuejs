@@ -93,5 +93,29 @@ export const store = reactive({
         value: 0,
         title: 'ACCIDENT RATE'
       }
+    ],
+    footerLinkArr: [
+      'Basic Driving Course',
+      'Pass Plus Driving Course',
+      'Intensive Driving Course',
+      'Instructors Training'
+    ],
+    footerInfoArr: [
+      {
+        icon:'fa-solid fa-house',
+        info: '50 North Main Street, New York, NY 98765'
+      },
+      {
+        icon:'fa-solid fa-phone',
+        info: 'Toll Free: 1-800-555-555'
+      },
+      {
+        icon:'fa-solid fa-envelope',
+        info: 'info@your-domain.com'
+      },
+      {
+        icon:'fa-solid fa-turn-up',
+        info: 'Mon to Sat: 8 am - 5 am'
+      }
     ]
 });
