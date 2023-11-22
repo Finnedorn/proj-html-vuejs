@@ -1,5 +1,5 @@
 <template>
-  <!--section-CTA-->
+  <!--CTA-->
   <div class="container-fluid cta-wrapper">
     <div class="container">
       <div class="row align-items-center">
@@ -40,18 +40,18 @@
       </div>
     </div>
   </div>
-  <!--section rate-->
+  <!--rate-->
   <div class="container-fluid rate-wrapper">
     <div class="container">
       <div class="row justify-content-center">
-        <CardRateComponent v-for="(el,idex) in store.rateArr" :key="index" :title="el" class="col-3"/>
+        <CardRateComponent v-for="(el,index) in store.rateArr" :key="index" :title="el" class="col-3"/>
       </div>
     </div>
   </div>
-  <!--section instructor-->
+  <!--instructor-->
   <div class="container-fluid">
     <div class="container pt-5">
-      <div class="row align-items-center py-5">
+      <div class="row align-items-center py-1">
         <div class="col-lg-7">
           <h2 class="fs-1 pb-4 text-my-dark-grey">
             Your Instructors
@@ -67,6 +67,28 @@
     </div>
   </div>
   <!--instructor cards-->
+  <div class="container-fluid">
+    <div class="container d-flex flex-wrap flex-grow-0 justify-content-center align-items-center instructor">
+      <PortraitCardComponent v-for="(el,index) in store.instructorArr" :key="index" :portrait="el.portrait" :name="el.name" />
+    </div>
+  </div>
+  <!--carousel-->
+  <div class="container-fluid testimonials-wrapper">
+    <div class="py-5">
+      <CarouselComponent/>
+    </div>
+  </div>
+  <!--latest news-->
+  <div class="container-fluid news-wrapper">
+    <div class="bg-my-white news m-auto">
+      <h2 class="fs-1 text-my-dark-grey text-center ">
+        Latest News
+      </h2>
+      <div class="d-flex justify-content-center ">
+        <CardNewsComponent v-for="(el, index) in store.newsArr" :key="index" :title="el.title" :image="el.picture"/>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -74,12 +96,18 @@
   import BtnGreenComponent from './subcomponents/BtnGreenComponent.vue';
   import MicroCardComponent from './subcomponents/MicroCardComponent.vue';
   import CardRateComponent from './subcomponents/CardRateComponent.vue';
+  import PortraitCardComponent from './subcomponents/PortraitCardComponent.vue';
+  import CarouselComponent from './subcomponents/CarouselComponent.vue';
+  import CardNewsComponent from './subcomponents/CardNewsComponent.vue';
   export default {
     name: 'MainComponent',
     components: {
       BtnGreenComponent,
       MicroCardComponent,
-      CardRateComponent
+      CardRateComponent,
+      PortraitCardComponent,
+      CarouselComponent,
+      CardNewsComponent
     },
     data() {
       return {
@@ -135,4 +163,19 @@
 .more {
   padding: 8px 100px !important;
 }
+
+div.instructor:nth-child(2) {
+  padding-bottom: 60px;
+}
+
+.testimonials-wrapper {
+  padding-top: 80px;
+  background-image: url(../assets/images/testimonial-background.jpg);
+  background-size: cover;
+}
+
+.news {
+  max-width: 50%;
+}
+
 </style>
