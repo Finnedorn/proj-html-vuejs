@@ -17,7 +17,7 @@
             {{ store.carouselArr[activeIndex].name }}
         </h5>
         <div class="d-flex justify-content-center ">
-            <div v-for="index in store.carouselArr" class="mx-1" :class="[this.activeIndex === index ?'carousel-point active':'carousel-point']" @click="syncIndex(index)"></div>
+            <div v-for="(el,index) in store.carouselArr" class="mx-1" :class="[this.activeIndex === index ? 'carousel-point active':'carousel-point']" @click="syncIndex(index)"></div>
         </div>
     </div>
 </template>
@@ -75,8 +75,13 @@ p {
     border-radius: 50%;
 }
 
-.carousel-point .active {
+.carousel-point.active {
     background-color: $light-blue;
+}
+
+.carousel-point:hover {
+    background-color: $light-blue;
+    transition: all 0.8s;
 }
 
 </style>

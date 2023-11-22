@@ -44,7 +44,7 @@
   <div class="container-fluid rate-wrapper">
     <div class="container">
       <div class="row justify-content-center">
-        <CardRateComponent v-for="(el,index) in store.rateArr" :key="index" :title="el" class="col-3"/>
+        <CardRateComponent v-for="(el,index) in store.valueArr" :value="el.value" :title="el.title" class="col-lg-3"/>
       </div>
     </div>
   </div>
@@ -80,13 +80,37 @@
   </div>
   <!--latest news-->
   <div class="container-fluid news-wrapper">
-    <div class="bg-my-white news m-auto">
-      <h2 class="fs-1 text-my-dark-grey text-center ">
-        Latest News
-      </h2>
-      <div class="d-flex justify-content-center ">
-        <CardNewsComponent v-for="(el, index) in store.newsArr" :key="index" :title="el.title" :image="el.picture"/>
+    <div class="news">
+      <div class="container bg-my-white m-auto py-4 top-news">
+        <h2 class="fs-1 text-my-dark-grey text-center pt-5 pb-3 ">
+          Latest News
+        </h2>
+        <div class="d-flex justify-content-center flex-wrap">
+          <CardNewsComponent v-for="(el, index) in store.newsArr" :key="index" :title="el.title" :image="el.picture"/>
+        </div>
+        <div class="d-flex justify-content-center pt-4">
+          <BtnGreenComponent :content="'MORE FROM THE BLOG'"/>
+        </div>
       </div>
+      <div class="container bottom-news">
+      </div>
+    </div>
+  </div>
+  <!--news CTA-->
+  <div class="container-fluid news-cta-wrapper">
+    <div class="container py-5 text-center">
+      <h2 class="fs-2 text-my-dark-grey pb-4 pt-2">
+        Sign up to our NewsLetter
+      </h2>
+      <div class="d-flex justify-content-center  flex-nowrap ">
+        <input class="form-control form-control-lg w-50" type="text" aria-label=".form-control-lg example">
+      </div>
+      <div class="py-4">
+        <BtnGreenComponent :content="'SUBSCRIBE'" class="subscribe-btn"/>
+      </div>
+      <h6 class="text-center text-my-blue fw-light pb-3">
+        (We do not share your data with anybody, and only use it for its intended purpose)
+      </h6>
     </div>
   </div>
 </template>
@@ -170,12 +194,38 @@ div.instructor:nth-child(2) {
 
 .testimonials-wrapper {
   padding-top: 80px;
+  padding-bottom: 30px;
   background-image: url(../assets/images/testimonial-background.jpg);
   background-size: cover;
 }
 
+.news-wrapper {
+  background-image: url(../assets/images/latestnews-background.jpg);
+  background-size: cover;
+}
+
 .news {
-  max-width: 50%;
+  transform: translateY(-2.5rem);
+}
+.top-news {
+  border-radius: 10px 10px 0px 0px;
+  border-top: 5px solid $grey;
+}
+
+.bottom-news {
+  height: 120px;
+  background-image: url(../assets/images/latestnews-bottom.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.news-cta-wrapper {
+  background-image: url(../assets/images/newsletter_background.jpg);
+  background-size: cover;
+}
+.subscribe-btn {
+  padding-left: 22% !important;
+  padding-right: 22% !important;
 }
 
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="text-center mx-4 py-5">
+    <div class="text-center mx-4 py-5 ">
       <div>
             <div class="img-wrapper overflow-hidden">
                 <img :src="image" :alt="title">
@@ -7,7 +7,7 @@
             <h4 class="text-my-green pt-3">
                 {{title}}
             </h4>
-            <div class="d-flex comment justify-content-center ">
+            <div class="d-flex comment justify-content-center pb-3">
                 <div class="text-my-blue">
                     February 7th, 2019 |
                 </div>
@@ -15,7 +15,7 @@
                     0 Comments
                 </div>
             </div>
-            <h6>
+            <h6 class="text-my-blue fw-light ">
                 Lorem ipsum dolor sit amet consectetur adipisicing
             </h6>
       </div>

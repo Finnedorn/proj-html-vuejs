@@ -79,5 +79,19 @@ export const store = reactive({
         title: 'Avada Driving School Expanding',
         picture: '/public/images/blogpost-10and2-700x441.jpg'
       }
+    ],
+    valueArr: [
+      {
+        value: 95,
+        title: 'PASS RATE'
+      },
+      {
+        value: 100,
+        title: 'REFERRAL RATE'
+      },
+      {
+        value: 0,
+        title: 'ACCIDENT RATE'
+      }
     ]
 });
