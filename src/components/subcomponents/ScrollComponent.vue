@@ -32,7 +32,7 @@
 .scroll-wrapper:hover {
     background-color: $green;
     transform: translateY(-1rem);
-    transition: all 0.8s;
+    transition: all 0.5s;
 }
 
 </style>

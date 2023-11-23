@@ -4,7 +4,8 @@
     <div class="container">
       <div class="row align-items-center">
         <!--text right-->
-        <div class="col-lg-6 col-md-12 text-light py-3 text-CTA-right fadeInLeft" ref="CTA-right">
+        <div v-motion-slide-visible-once-left
+         class="col-lg-6 col-md-12 text-light py-3 text-CTA-right " ref="CTA-right">
           <h2 class="fs-1">
             Start Learning Drive Today
           </h2>
@@ -13,7 +14,8 @@
           </h4>
         </div>
         <!--text left-->
-        <div class=" col-lg-6 col-md-12 text-lg-center text-light py-3 text-CTA-left fadeInRight">
+        <div v-motion-slide-visible-once-right 
+        class=" col-lg-6 col-md-12 text-lg-center text-light py-3 text-CTA-left">
           <i class="fa-solid fa-phone me-4 fs-3 "></i>
           <span class="fs-2">1-800-555-555</span>
         </div>
@@ -38,7 +40,8 @@
           <BtnGreenComponent :content="'COURSE INFORMATION'" class="mb-3"/>
         </div>
         <!--courses micro card offers-->
-        <div class="col-lg-8 px-5 d-flex flex-wrap justify-content-center micro-card-wrapper">
+        <div v-motion-slide-visible-once-left
+        class="col-lg-8 px-5 d-flex flex-wrap justify-content-center micro-card-wrapper">
           <MicroCardComponent v-for="(el,index) in store.coursesArr" :key="index" :image="el.picture" :title="el.title" class="micro-card fadeInLeft" />
         </div>
       </div>
@@ -89,11 +92,13 @@
         <h2 class="fs-1 text-my-dark-grey text-center pt-5 pb-3 ">
           Latest News
         </h2>
-        <div class="d-flex justify-content-center flex-wrap">
-          <CardNewsComponent v-for="(el, index) in store.newsArr" :key="index" :title="el.title" :image="el.picture" class="card-news fadeInTop"/>
+        <div v-motion-slide-visible-once-bottom
+        class="d-flex justify-content-center flex-wrap">
+          <CardNewsComponent v-for="(el, index) in store.newsArr" :key="index" :title="el.title" :image="el.picture" class="card-news"/>
         </div>
-        <div class="d-flex justify-content-center pt-4">
-          <BtnGreenComponent :content="'MORE FROM THE BLOG'" class="fadeInTop"/>
+        <div v-motion-slide-visible-once-top
+         class="d-flex justify-content-center pt-4">
+          <BtnGreenComponent :content="'MORE FROM THE BLOG'"/>
         </div>
       </div>
       <div class="container bottom-news">
