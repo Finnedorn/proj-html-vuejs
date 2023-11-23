@@ -1,9 +1,9 @@
 <template>
   <!--top footer-->
   <div class="container-fluid top-footer-wrapper">
-    <div class="container">
+    <div class="container top-footer">
       <div class="row py-5 align-items-start  justify-content-center">
-        <div class="col-lg-3 py-3">
+        <div class="col-lg-3 py-3 top-element-logo">
           <div class="logo-wrapper pb-4">
             <img src="../assets/images/avada-drivers-logo-1x.png" alt="avada_drivers_logo">
           </div>
@@ -19,13 +19,13 @@
           <h4 class="text-light pb-2">
             Driving Courses
           </h4>
-          <CoursesLinkComponent v-for="(el,index) in store.footerLinkArr" :key="index" :title="el" />
+          <CoursesLinkComponent v-for="(el,index) in store.footerLinkArr" :key="index" :title="el" class="top-element-courses" />
         </div>
         <div class="col-lg-3 py-3">
           <h4 class="text-light pb-3">
             Contact Details
           </h4>
-          <InfoListComponent v-for="(el,index) in store.footerInfoArr" :key="index" :iconclass="el.icon" :title="el.info" />
+          <InfoListComponent v-for="(el,index) in store.footerInfoArr" :key="index" :iconclass="el.icon" :title="el.info" class="top-element-courses" />
         </div>
         <div class="col-lg-3 py-3">
           <h4 class="text-light pb-4">
@@ -119,4 +119,36 @@ a {
 .prefooter {
   font-size: 0.8rem;
 }
+
+@media screen and (max-width: 1199.98px) {
+  .logo-wrapper {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .top-footer {
+    text-align: center;
+  }
+
+  .top-element-logo {
+    margin-bottom: 40px;
+  }
+
+  .logo-wrapper {
+    margin: 0 auto;
+  }
+
+  .top-element-courses {
+    justify-content: center;
+  }
+
+  .demo-wrapper {
+    margin: 0 auto;
+  }
+
+}
+
+
+
 </style>

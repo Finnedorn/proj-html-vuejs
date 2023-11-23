@@ -47,13 +47,13 @@
 }
 
 .img-wrapper:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
   opacity: 0.9;
   transition: all 1s;
 }
 
 .comment {
-    font-size: 0.8rem;
+  font-size: 0.8rem;
 }
 
 </style>

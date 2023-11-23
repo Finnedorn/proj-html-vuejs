@@ -1,5 +1,5 @@
 <template>
-    <div @click="progress(value)" class="mx-2 bg-my-white rounded-3 card-wrapper overflow-hidden g-0 d-flex flex-column   align-items-center ">
+    <div @pointerenter="progress(value)" class="mx-2 bg-my-white rounded-3 card-wrapper overflow-hidden g-0 d-flex flex-column   align-items-center ">
       <div class="percentage-wrapper position-relative">
         <div class="card-container">
           <div class="perc-outer" ref="progress" :style="{background: `conic-gradient( #7abc64 ${this.progressValue * 3.6}deg, #f6f6f6 ${this.progressValue * 3.6}deg )`}">

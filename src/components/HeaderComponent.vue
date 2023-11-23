@@ -28,13 +28,13 @@
               <div class="greenbar"></div>
             </li>
           </ul>
-          <BtnGreenComponent :content="'BOOK NOW'"/>
+          <BtnGreenComponent :content="'BOOK NOW'" class="book"/>
         </div>
       </nav>
     </div>
     <!--hero-title-->
     <div class="container">
-      <div class="hero-title text-light ">
+      <div class="hero-title text-light fadeInLeft">
         <h1 class="hero-title-font">
           Drive with Avada
         </h1>
@@ -48,7 +48,8 @@
   <div class="container-fluid">
     <div class="container">
       <div class="row py-2">
-        <div class="col-lg-6 col-md-12 text-wrapper">
+        <!--text-->
+        <div class="col-lg-6 col-md-12 text-wrapper fadeInLeft">
           <h2 class="text-my-dark-grey fs-1 pb-4">
             Get Behind the Wheel
           </h2>
@@ -59,7 +60,8 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus reprehenderit recusandae laborum dolores, dolorem et excepturi maxime asperiores nemo eaque reiciendis, iure accusamus aspernatur architecto placeat ipsam. Quae quisquam labore asperiores repellat, dignissimos officia ipsa cumque quo aut dolorem maiores totam nihil magnam ea excepturi nisi dolore. Ex, omnis
           </p>
         </div>
-        <div class="col-lg-6 col-md-12 px-5">
+        <!--form-->
+        <div class="col-lg-6 col-md-12 px-5 fadeInTop">
           <div class="p-5 form-wrapper rounded-3 text-center bg-my-white">
             <h2 class="pb-3 text-my-green">
               First Lesson Free!
@@ -163,5 +165,202 @@
   font-size: 0.9rem !important;
   color: $light-blue !important;
 }
+
+.navbar-toggler {
+  color: $grey !important;
+  border: 1px solid $grey !important;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(100);
+}
+
+@media screen and (max-width: 1199.98px) {
+  .book {
+    display: none;
+  }
+  .text-wrapper {
+    padding: 50px 0px 50px 0px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .text-wrapper {
+    text-align: center;
+    padding: 100px 0px 100px 0px;
+  }
+}
+
+
+//animation//
+
+//left
+
+.fadeInLeft {
+  -webkit-animation: fadeInLeft 1.2s both;
+  -moz-animation: fadeInLeft 1.2s both;
+  -o-animation: fadeInLeft 1.2s both;
+  animation: fadeInLeft 1.2s both;
+}
+
+@-webkit-keyframes fadeInLeft {
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes fadeInLeft {
+  
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes fadeInLeft {
+
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+} 
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+//top
+
+.fadeInTop {
+  -webkit-animation: fadeInTop 1.2s both;
+  -moz-animation: fadeInTop 1.2s both;
+  -o-animation: fadeInTop 1.2s both;
+  animation: fadeInTop 1.2s both;
+}
+
+@-webkit-keyframes fadeInTop {
+
+0% {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+}
+100% {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+}
+}
+
+@-moz-keyframes fadeInTop {
+
+0% {
+  opacity: 0;
+  -moz-transform: translateY(50px);
+}
+100% {
+  opacity: 1;
+  -moz-transform: translateY(0);
+}
+}
+
+@-o-keyframes fadeInTop {
+
+0% {
+  opacity: 0;
+  -o-transform: translateY(50px);
+}
+100% {
+  opacity: 1;
+  -o-transform: translateY(0);
+}
+} 
+
+@keyframes fadeInTop {
+0% {
+  opacity: 0;
+  transform: translateY(50px);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+}
+}
+
+//right
+
+.fadeInRight {
+  -webkit-animation: fadeInRight 1.2s both;
+  -moz-animation: fadeInRight 1.2s both;
+  -o-animation: fadeInRight 1.2s both;
+  animation: fadeInRight 1.2s both;
+}
+
+@-webkit-keyframes fadeInRight {
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes fadeInRight {
+  
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes fadeInRight {
+
+  0% {
+    opacity: 0;
+    -o-transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+} 
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 
 </style>
