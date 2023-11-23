@@ -52,7 +52,7 @@
           WordPress
         </div>
       </div>
-      <div class="text-my-grey d-flex align-items-center fs-6 m-auto py-2">
+      <div class="text-my-grey d-flex align-items-center fs-6 py-2">
         <i class="fa-brands fa-facebook-f ms-3 "><a href="#"></a></i>
         <i class="fa-brands fa-x-twitter ms-3"><a href="#"></a></i>
         <i class="fa-brands fa-youtube ms-3"><a href="#"></a></i>
